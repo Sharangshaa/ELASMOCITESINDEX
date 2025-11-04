@@ -21,9 +21,9 @@ Live App: https://sharangshaa.shinyapps.io/ELASMOCITESINDEX/
 
 The dataset provided in this repository contains  publicly available data compiled from official sources such as:
 
-IUCN Red List (assessment.csv in this repositiory) source : 
+IUCN Red List (assessment.csv in this repositiory)  
 
-CITES Trade Database ( CITES_info.csv)  source : 
+CITES Trade Database ( CITES_info.csv)   
 
 transformed and combined database used for the application (citesdb.csv)
 

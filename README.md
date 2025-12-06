@@ -28,15 +28,3 @@ CITES Trade Database ( CITES_info.csv)
 
 transformed and combined database used for the application (citesdb.csv)
 
-**Future Enhancements**
-
-Integrate live IUCN and CITES API connections
-
-Add map-based species distribution visualization
-
-Provide download option for filtered species lists
-IUCN Red List for conservation status data (https://www.iucnredlist.org/)
-
-CITES Secretariat for trade information (https://trade.cites.org/)
-
-Open-source R community for packages and tools

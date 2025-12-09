@@ -12,7 +12,6 @@ ui <- fluidPage(
       selectInput("sc_name", "Select Species", choices = df$sc_name)
     ),
     
-    # show species selectin tab on right
     mainPanel(
       uiOutput("info_display"), position = "right"
     )
@@ -63,3 +62,4 @@ server <- function(input, output, session) {
 }
 
 shinyApp(ui, server)
+

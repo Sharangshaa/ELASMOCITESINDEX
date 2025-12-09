@@ -1,15 +1,9 @@
-
-# This is a Shiny web application. You can run the application by clicking
-# the 'Run App' button above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    https://shiny.posit.co/
-#
+# load library
 library(shiny)
 library(tidyverse)
-
+# select data
 df <- read.csv("citesdb.csv")
+# UI for the app and title
 ui <- fluidPage(
   titlePanel("Information of CITES listed elasmobranchs"),
   sidebarLayout(
@@ -18,14 +12,14 @@ ui <- fluidPage(
       selectInput("sc_name", "Select Species", choices = df$sc_name)
     ),
     
-    ##Output information on the main panel based on the selection
+    # show species selectin tab on right
     mainPanel(
       uiOutput("info_display"), position = "right"
     )
   )
 )
 server <- function(input, output, session) {
-  ##creating reactive object and query the df
+  # show information of species after selecting species
   speciesinfo <- reactive({
     req(input$sc_name)
     df[df$sc_name == input$sc_name, ]
@@ -33,10 +27,10 @@ server <- function(input, output, session) {
   output$info_display <- renderUI({
     rec <- speciesinfo()
     
-    ##prevent blank output or error
+    ##preventing blank output
     if (nrow(rec) == 0) return()
     
-    ## create taglist on the right side of main panel 
+    # defining species info and add color to redlist status
     tagList(
       p(strong("Common Name:"), rec$cm_name),
       p(strong("Redlist status:"), span (rec$redlist,
@@ -67,4 +61,5 @@ server <- function(input, output, session) {
     )
   })
 }
+
 shinyApp(ui, server)

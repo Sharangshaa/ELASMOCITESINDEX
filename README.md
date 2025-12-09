@@ -18,13 +18,12 @@ Trade insights: Highlights key trade notes and observations from official databa
 
 Geographical range: Displays global distribution and countries of occurrence
 
-** **Data Disclaime**r**
+** **Data Disclaimer**
 
 The dataset provided in this repository contains  publicly available data compiled from official sources such as:
-
-IUCN Red List (assessment.csv in this repositiory)  
-
-CITES Trade Database ( CITES_info.csv)   
-
+IUCN. 2025. The IUCN Red List of Threatened Species. Version 2025-2. https://www.iucnredlist.org. Accessed on [30 October 2025].  
+UNEP-WCMC. 2025. CITES Trade Database. Cambridge, UK: UNEP World Conservation Monitoring Centre.
+Available at: https://trade.cites.org
+ (Accessed: 30 DOctober 2025).
 transformed and combined database used for the application (citesdb.csv)
 

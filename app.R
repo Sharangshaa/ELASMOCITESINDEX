@@ -1,6 +1,7 @@
 # load library
 library(shiny)
 library(tidyverse)
+
 # select data
 df <- read.csv("citesdb.csv")
 # UI for the app and title
@@ -8,6 +9,7 @@ ui <- fluidPage(
   titlePanel("Information of CITES listed elasmobranchs"),
   sidebarLayout(
     sidebarPanel(
+      
       ##select species name on the left
       selectInput("sc_name", "Select Species", choices = df$sc_name)
     ),
@@ -18,6 +20,7 @@ ui <- fluidPage(
   )
 )
 server <- function(input, output, session) {
+  
   # show information of species after selecting species
   speciesinfo <- reactive({
     req(input$sc_name)
@@ -62,4 +65,5 @@ server <- function(input, output, session) {
 }
 
 shinyApp(ui, server)
+
 
